@@ -1,0 +1,50 @@
+.hero {
+  padding-top: 80px;
+}
+
+.heroContent {
+  font-weight: 700;
+  text-transform: capitalize;
+  max-width: 350px;
+}
+
+.heroInputWrapper {
+  margin-top: 48px;
+}
+
+.heroInput {
+  box-sizing: border-box;
+  padding: 0 12px;
+  height: 40px;
+  width: 280px;
+  border-radius: 2px;
+  border: 1px solid var(--pri-color);
+}
+
+.heroFormBtn {
+  background-color: var(--pri-color);
+  color: #fff;
+  padding: 10px 25px;
+  margin-left: 10px;
+}
+
+.heroBizDetailWrapper {
+  padding: 80px 0;
+}
+
+.heroBizDetail {
+  font-size: 30px;
+  line-height: 25px;
+  text-align: center;
+}
+
+.heroBizDetail span {
+  font-size: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .heroContent {
+    font-size: 56px;
+    line-height: 64px;
+  }
+}
