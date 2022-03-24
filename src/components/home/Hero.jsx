@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div className="container">
       <div className={styles.hero}>
-        <div className="row justify-content-between align-items-center">
+        <div className="row justify-content-between align-items-center'">
           <div className="col-5">
             <div className={styles.heroContent}>
               <h1>buy, trade, and hold crypto and giftcard</h1>
