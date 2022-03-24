@@ -18,6 +18,26 @@ a:hover {
   color: transparent;
 }
 
+h1 {
+  font-size: 56px !important;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 40px !important;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 24px !important;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 18px !important;
+  font-weight: 600;
+}
+
 button {
   background-color: transparent;
   outline: none !important;
@@ -59,6 +79,10 @@ nav {
 footer {
   width: 100%;
   padding: 20px 0;
-  background-color: #f2f3fa;
+  background-color: #222;
   font-weight: 600;
+}
+
+.copyright-text {
+  color: #fff;
 }

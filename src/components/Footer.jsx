@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import FooterLogo from "../assets/image/logo-alt.png";
+import FooterLogo from "../assets/image/logo.png";
 
 const Footer = () => {
   return (
@@ -17,7 +17,7 @@ const Footer = () => {
             <Link to="#">Twitter</Link>
           </div>
         </div>
-        <div className="text-center">
+        <div className="text-center copyright-text">
           bitscard &copy; {new Date().getFullYear()}
         </div>
       </div>
