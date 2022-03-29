@@ -1,48 +1,79 @@
 .hero {
-  padding-top: 80px;
+  height: 612px;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .heroContent {
-  font-weight: 600;
   text-transform: capitalize;
-  max-width: 450px;
 }
 
-.heroInputWrapper {
-  margin-top: 48px;
+.heroContent > h1 {
+  font-weight: 700;
 }
 
-.heroInput {
-  box-sizing: border-box;
-  padding: 0 12px;
-  height: 40px;
-  width: 280px;
-  border-radius: 2px;
-  border: 1px solid var(--pri-color);
-}
-
-.heroFormBtn {
-  background-color: var(--pri-color);
-  color: #fff;
-  padding: 10px 25px;
-  margin-left: 10px;
-  border-radius: 5px;
-}
-
-.heroBizDetailWrapper {
+/* features section */
+.featureSection,
+section {
   padding: 80px 0;
 }
 
-.heroBizDetail {
-  font-size: 40px;
-  line-height: 25px;
+.featureCard {
+  max-width: 352px;
+  border-radius: 24px;
+  padding: 40px 32px;
   text-align: center;
-  font-weight: 600;
+  border: 2px solid #787a8d;
+
+  /* border-image-source: linear-gradient(
+    180deg,
+    #787a8d 0%,
+    rgba(120, 122, 141, 0.29) 69.79%
+  ) !important; */
 }
 
-.heroBizDetail span {
-  font-size: 16px;
-  font-weight: 400;
+.featureCardHeader {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+.sectionHeader {
+  font-size: 44px;
+  color: #fff;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.downloadAppCardWrapper {
+  display: grid;
+  grid-template-columns: 178px 270px;
+  grid-template-rows: 665px;
+}
+
+.downloadAppCard {
+  width: 270px;
+  height: 545px;
+  background-color: #fff;
+}
+
+/* Market Trend Section */
+
+/* CTA section */
+
+.cta {
+  width: 100%;
+  height: 392px;
+  background: #21242d;
+  padding: 84px 0;
+  position: relative;
+}
+
+.ctaImage {
+  position: absolute;
+  top: -100px;
 }
 
 /* section 2 */

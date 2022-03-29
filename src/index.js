@@ -7,6 +7,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 // pages
 import Home from "./pages/Home";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
+import ForgotPassword from "./pages/ForgotPassword";
+import VerificationPage from "./pages/VerificationPage";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,6 +19,10 @@ ReactDOM.render(
         <Route path="" element={<App />}>
           <Route index element={<Home />} />
         </Route>
+        <Route path="register" element={<Register />} />
+        <Route path="login" element={<Login />} />
+        <Route path="forgot-password" element={<ForgotPassword />} />
+        <Route path="verification" element={<VerificationPage />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

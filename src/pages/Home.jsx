@@ -1,16 +1,18 @@
 import React from "react";
+import CTA from "../components/home/CTA";
+import DownloadApp from "../components/home/DownloadApp";
+import Features from "../components/home/Features";
 import Hero from "../components/home/Hero";
-import SectionFour from "../components/home/SectionFour";
-import SectionThree from "../components/home/SectionThree";
-import SectionTwo from "../components/home/SectionTwo";
+import MarketTrend from "../components/home/MarketTrend";
 
 const Home = () => {
   return (
     <main>
       <Hero />
-      <SectionTwo />
-      <SectionThree />
-      <SectionFour />
+      <Features />
+      <DownloadApp />
+      <MarketTrend />
+      <CTA />
     </main>
   );
 };

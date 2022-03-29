@@ -1,13 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
-
-body {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap");
 
 :root {
-  --pri-color: #0053b0;
+  --body-bg: #16171d;
+  --pri-color: #338af3;
+  --body-text: #a7aebf;
+  --alt-bg: #21242d;
+}
+
+.pri-color {
+  color: var(--pri-color);
+}
+
+body {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 400;
+  font-size: 16px;
+  background: var(--body-bg) !important;
+  color: var(--body-text) !important;
 }
 
 a {
@@ -19,8 +28,8 @@ a:hover {
 }
 
 h1 {
-  font-size: 56px !important;
-  font-weight: 600;
+  font-size: 44px !important;
+  font-weight: 700;
 }
 
 h2 {
@@ -44,16 +53,17 @@ button {
   border: none;
 }
 
-button:focus {
+button:focus,
+input:focus {
   outline: none;
 }
 
 .pri-btn {
   background-color: var(--pri-color);
-  color: #fff;
+  color: var(--body-bg) !important;
   padding: 10px 25px;
   margin-left: 10px;
-  border-radius: 5px;
+  border-radius: 12px;
 }
 
 .pri-btn:hover {
@@ -63,12 +73,16 @@ button:focus {
 nav {
   width: 100%;
   padding: 10px 0;
-  background-color: #d1e9fc;
+  /* background-color: #d1e9fc; */
 }
 
 .nav-menu a {
-  color: #000;
-  font-weight: 600;
+  color: var(--body-text);
+  font-size: 16px;
+}
+
+.logo {
+  width: 250px;
 }
 
 .nav-menu a:hover {
@@ -78,11 +92,110 @@ nav {
 /* footer */
 footer {
   width: 100%;
-  padding: 20px 0;
-  background-color: #222;
+  padding: 48px 0;
+}
+
+footer a {
+  color: var(--body-text);
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+.footer-header {
+  font-size: 20px;
+  color: #fff;
   font-weight: 600;
+  margin-bottom: 30px;
 }
 
 .copyright-text {
   color: #fff;
+}
+
+/* Sign Up & Login in page */
+/* styling below was used for both sign up and login page */
+
+.register-page {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.register-image-wrapper {
+  background: var(--alt-bg);
+  padding-top: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-form-wrapper {
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reg-logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.top-end-info {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+}
+
+.reg-form-wrapper {
+  width: 448px;
+}
+
+.reg-form-wrapper label {
+  font-size: 14px;
+  color: #787a8d;
+  margin-bottom: 10px;
+}
+
+.reg-form-wrapper .reg-input {
+  width: 100%;
+  height: 56px;
+  border-radius: 12px;
+  background: var(--alt-bg);
+  border: none;
+  padding: 16px;
+  box-sizing: border-box;
+  color: #787a8d;
+}
+
+.reg-form-wrapper .reg-input::placeholder {
+  color: #787a8d;
+}
+
+.checkbox-input {
+  background: var(--alt-bg);
+  color: var(--alt-bg);
+}
+
+.verfication-input-wrapper > div {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.verfication-input-wrapper input {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  background-color: var(--alt-bg);
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
 }
