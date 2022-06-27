@@ -4,6 +4,7 @@ import DownloadApp from "../components/home/DownloadApp";
 import Features from "../components/home/Features";
 import Hero from "../components/home/Hero";
 import MarketTrend from "../components/home/MarketTrend";
+import News from "../components/home/News";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Features />
       <DownloadApp />
       <MarketTrend />
+      <News />
       <CTA />
     </main>
   );
