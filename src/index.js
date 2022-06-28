@@ -11,18 +11,24 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import ForgotPassword from "./pages/ForgotPassword";
 import VerificationPage from "./pages/VerificationPage";
+import MarketPage from "./pages/MarketPage";
+
 
 ReactDOM.render(
   <React.StrictMode>
+
     <BrowserRouter>
       <Routes>
         <Route path="" element={<App />}>
           <Route index element={<Home />} />
+          <Route path="/market" element={<MarketPage />} />
         </Route>
         <Route path="register" element={<Register />} />
         <Route path="login" element={<Login />} />
         <Route path="forgot-password" element={<ForgotPassword />} />
         <Route path="verification" element={<VerificationPage />} />
+
+
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

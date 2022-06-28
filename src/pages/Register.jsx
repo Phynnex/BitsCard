@@ -40,18 +40,6 @@ const Register = () => {
               />
             </div>
 
-            <div className="mt-4">
-              <label>Password</label>
-              <input
-                className="reg-input"
-                type="password"
-                placeholder="Enter your password"
-              />
-              <label>
-                At least 8 characters with uppercase letters and numbers
-              </label>
-            </div>
-
             <div>
               <input
                 className="checkbox-input"

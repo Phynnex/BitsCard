@@ -12,7 +12,7 @@ const Navbar = () => {
               <img className="logo" src={Logo} alt="bitscard logo" />
             </Link>
             <Link to="#">Buy Crypto</Link>
-            <Link to="#">Market</Link>
+            <Link to="/market">Market</Link>
           </div>
           <div className="d-flex align-items-center gap-5">
             <Link to="/login">Login</Link>

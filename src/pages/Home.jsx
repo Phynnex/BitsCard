@@ -3,7 +3,7 @@ import CTA from "../components/home/CTA";
 import DownloadApp from "../components/home/DownloadApp";
 import Features from "../components/home/Features";
 import Hero from "../components/home/Hero";
-import MarketTrend from "../components/home/MarketTrend";
+import MarketTrend from "../components/home/MarketTrend/table";
 import News from "../components/home/News";
 
 const Home = () => {
