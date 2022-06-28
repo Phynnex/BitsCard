@@ -21,7 +21,7 @@ const News = () => {
   return (
     <div>
       <div className="d-flex justify-content-between mt-3">
-        <h2 className={styles.cryptoNewsTableHeader}>News of The Day</h2>
+        <h2>News of The Day</h2>
         
       </div>
 

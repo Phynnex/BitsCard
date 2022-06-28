@@ -5,13 +5,14 @@ import MarketHeroImg from "../../assets/image/marketHero.svg";
 
 const Hero = () => {
   return (
-    <div className={styles.hero}>
-      <div className="container">
-        <div className="row align-items-center">
-          <div className="col">
+    <div >
+      <div >
+        <div style={{width:"80%", display:"flex", justifyContent:"center", margin:"auto" }}>
+          <div >
             <div >
-              <h1 className="text-white">
-              Today's Cryptocurrency Prices by Market Cap
+              <h1>
+              Today's Cryptocurrency Prices <br />
+               by Market Cap
 
               </h1>
               <p>The global crypto market cap is $2.05T, a 2.35% decrease over the last day. Read More </p>
@@ -20,8 +21,8 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="col">
-            <img className="img-fluid" src={MarketHeroImg} alt="" />
+          <div >
+            <img src={MarketHeroImg} alt="" />
           </div>
         </div>
       </div>

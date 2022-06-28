@@ -5,6 +5,7 @@ import animationDataUp from "../../../lottie/up.json";
 import animationDataDown from "../../../lottie/downward.json";
 import { Link } from "react-router-dom";
 
+
 import {
   TransTableBody,
   TransTableContainer,
@@ -43,6 +44,10 @@ const MarketTrend = () => {
   };
   return (
     <>
+     
+        <h2 >Market Trend</h2>
+        
+
     <TableScrollDiv>
       <TransTableContainer>
         <TransTableContent>
@@ -98,7 +103,7 @@ const MarketTrend = () => {
                           : defaultOptions
                       }
                       height={50}
-                      width={100}
+                      width={50}
                     />
                   </div>
                 </td>
