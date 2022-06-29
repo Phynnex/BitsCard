@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "../assets/image/logo.png";
+import Logo from "../assets/image/logo.svg";
 
 const Navbar = () => {
   return (
@@ -16,7 +16,7 @@ const Navbar = () => {
           </div>
           <div className="d-flex align-items-center gap-5">
             <Link to="/login">Login</Link>
-            <Link className="pri-btn" to="/register">
+            <Link to="/register" className="nav-btn">
               Sign up
             </Link>
             <Link to="#">Download</Link>

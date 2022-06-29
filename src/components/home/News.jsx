@@ -19,11 +19,8 @@ const News = () => {
     fetchNews();
   }, [setNews]);
   return (
-    <div>
-      <div className="d-flex justify-content-between mt-3">
-        <h2>News of The Day</h2>
-        
-      </div>
+    <div className="container">
+      <h2 className="text-white mb-5">News of The Day</h2>
 
       <div className={styles.cryptoNewsTableWrapper}>
         {newsErr != null ? (
@@ -34,38 +31,30 @@ const News = () => {
           news.map((val, key) => {
             return (
               <Link key={key} to={`/news/${val.id}`}>
-                <div>
-                  <div className="news-card">
-                    <div
-                      style={{
-                        backgroundImage: `url(http://www.dev.bitscard.co/uploads/${val.image})`,
-                      }}
-                      className="news-card-img"
-                    ></div>
-                    <div className="w-50">
-                      <p className="text-white m-0">{val.title}</p>
-                      <span>{val.author}</span>
-                      <p>{val.created_at}</p>
-                    </div>
-                  
+                <div className="news-card">
+                  <div
+                    style={{
+                      backgroundImage: `url(http://www.dev.bitscard.co/uploads/${val.image})`,
+                    }}
+                    className="news-card-img"
+                  ></div>
+                  <div>
+                    <div className="text-white m-0">{val.title}</div>
+                    <span>{val.author}</span>
+                    <div className="m-0">{val.created_at}</div>
                   </div>
-                  
                 </div>
-             
               </Link>
             );
           })
         )}
-        
       </div>
-      <div className="d-flex justify-content-center">
+      <div className="d-flex justify-content-center mt-5">
         <Link to="/">
-          <button className="pri-btn">View More</button>
+          <button className="sec-btn">View More</button>
         </Link>
-
-        </div>
+      </div>
     </div>
-    
   );
 };
 

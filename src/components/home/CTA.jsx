@@ -12,8 +12,8 @@ const CTA = () => {
             <div className="col">
               <div className={styles.sectionHeader}>Start Trading</div>
               <div className="mt-5">
-                <Link to="#" className="pri-btn">
-                  Get Started
+                <Link to="#">
+                  <button className="pri-btn">Get Started</button>
                 </Link>
               </div>
             </div>

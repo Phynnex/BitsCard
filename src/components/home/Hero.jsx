@@ -16,8 +16,8 @@ const Hero = () => {
               <p>Join the world largest crypto exchange </p>
 
               <div className="mt-5">
-                <Link to="/register" className="pri-btn">
-                  Get Started
+                <Link to="/register">
+                  <button className="pri-btn">Get Started</button>
                 </Link>
               </div>
             </div>

@@ -4,6 +4,7 @@ import http from "./httpService";
 export async function getMarketTrends() {
   try {
     const { data } = await http.get(`${FOUR_COINS}`);
+    // console.log(data);
     return data;
   } catch (err) {
     let error = {};
@@ -30,4 +31,3 @@ export async function getAllCoins() {
     return error;
   }
 }
-

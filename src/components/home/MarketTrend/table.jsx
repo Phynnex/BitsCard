@@ -5,6 +5,7 @@ import animationDataUp from "../../../lottie/up.json";
 import animationDataDown from "../../../lottie/downward.json";
 import { useNavigate, Link} from "react-router-dom";
 
+
 import {
   TransTableBody,
   TransTableContainer,
@@ -22,8 +23,8 @@ const MarketTrend = () => {
     isLoading,
     isError,
   } = useQuery("market", getMarketTrends);
-  console.log({ marketTrends, isLoading, isError });
-  console.log(marketTrends, "This is market");
+  // console.log({ marketTrends, isLoading, isError });
+  // console.log(marketTrends, "This is market");
 
   const defaultOptions = {
     loop: true,
@@ -42,9 +43,14 @@ const MarketTrend = () => {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
+
+  // console.log(marketTrends);
   return (
     <>
-      <h2>Market Trend</h2>
+     
+      <div className="container">
+        <h2 className="text-white">Market Trend</h2>
+      </div>
 
       <TableScrollDiv>
         <TransTableContainer>
@@ -58,13 +64,12 @@ const MarketTrend = () => {
               </tr>
 
               {marketTrends?.map((coin, key) => (
-                <tr key={key} onClick={() => {
+               
                   
-                  navigate("/register");
-                }}>
+               
                   
+                <tr key={key}>
                   <td>
-                  
                     <div className="d-flex justify-content-start">
                       <img
                         width={50}
@@ -114,7 +119,8 @@ const MarketTrend = () => {
       </TableScrollDiv>
       <div className="d-flex justify-content-center">
         <Link to="/market">
-          <button className="pri-btn">View More</button>
+          
+          <button className="sec-btn">View Markets</button>
         </Link>
       </div>
     </>

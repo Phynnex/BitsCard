@@ -61,9 +61,20 @@ input:focus {
 .pri-btn {
   background-color: var(--pri-color);
   color: var(--body-bg) !important;
-  padding: 10px 25px;
-  margin-left: 10px;
+  width: 203px;
+  height: 56px;
+  padding: 10px 20px;
   border-radius: 12px;
+}
+
+.sec-btn{
+  background: transparent;
+  border: 1px solid var(--pri-color);
+  padding: 10px 20px;
+  width: 203px;
+  height: 56px;
+  border-radius: 12px;
+  color: var(--pri-color);
 }
 
 .pri-btn:hover {
@@ -73,12 +84,22 @@ input:focus {
 nav {
   width: 100%;
   padding: 10px 0;
-  /* background-color: #d1e9fc; */
 }
 
 .nav-menu a {
   color: var(--body-text);
   font-size: 16px;
+}
+
+.nav-btn{
+  /* width: 112px; */
+  /* height: 48px; */
+  border-radius: 12px;
+  background-color: var(--pri-color);
+  color: var(--body-bg) !important;
+  padding: 10px 20px;
+  text-align: center;
+
 }
 
 .logo {
@@ -202,14 +223,15 @@ footer a:hover {
 
 
 .news-card {
-  width: 90%;
-  height: 160px;
-  display: flex;
-  justify-content: space-around;
+  max-width: 544px;
   background: var(--alt-bg);
-  margin: 30px 0px;
-  padding: 20px 0px 0px;
-  border-radius: 20px;
+  padding: 24px;
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: 88px auto;
+  align-items: center;
+  column-gap: 20px;
+  border-radius: 24px;
 }
 
 .news-card-img {
