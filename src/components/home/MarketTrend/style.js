@@ -46,5 +46,6 @@ export const TransTableContainer = styled.div`
 
 `;
 export const TransTableContent = styled.div`
+  width: 100%;
   box-sizing: border-box;
 `;
