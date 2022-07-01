@@ -42,7 +42,7 @@ const Footer = () => {
               <p>Submit A Request</p>
             </Link>
 
-            <Link to="#">
+            <Link to="/faq">
               <p>FAQ</p>
             </Link>
           </div>

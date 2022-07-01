@@ -17,8 +17,10 @@ import News from "./pages/NewsPage";
 import SingleNews from "./pages/SingleNews";
 import Settings from "./pages/settings";
 
+
 // settings components
 import Profile from "./components/settings/Profile";
+import Faq from "./pages/Faq";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -29,7 +31,8 @@ ReactDOM.render(
           <Route path="/market" element={<MarketPage />} />
           <Route path="market/:coin" element={<CryptoChart />} />
           <Route path="/news" element={<News />} />
-          <Route path="news/:id" element={<SingleNews />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/faq" element={<Faq />} />
 
 
           <Route path="settings" element={<Settings />}>

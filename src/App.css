@@ -269,3 +269,23 @@ footer a:hover {
   border-radius: 20px;
   background: #c4c4c4;
 }
+
+.faq-container {
+  background: var(--alt-bg);
+  /* background: red; */
+  padding: 40px 40px;
+  border-radius: 10px
+
+}
+
+.faq-accordion {
+  background: var(--body-bg) !important;
+  margin-bottom: 20px;
+  color: var(--body-text) !important;
+
+}
+
+.accordion-icon {
+  color: var(--pri-color);
+
+}
