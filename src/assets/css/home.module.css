@@ -14,8 +14,8 @@
 }
 
 /* features section */
-.featureSection,
-section {
+.featureSection,.homepageSection 
+{
   padding: 80px 0;
 }
 
