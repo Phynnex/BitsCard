@@ -5,7 +5,7 @@ import Icon from "../Icon";
 
 const DownloadApp = () => {
   return (
-    <section>
+    <section className={styles.homepageSection}>
       <div className="container">
         <div className="row align-items-center">
           <div className="col">

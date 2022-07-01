@@ -12,23 +12,26 @@ import Login from "./pages/Login";
 import ForgotPassword from "./pages/ForgotPassword";
 import VerificationPage from "./pages/VerificationPage";
 import MarketPage from "./pages/MarketPage";
+import Settings from "./pages/settings";
 
+// settings components
+import Profile from "./components/settings/Profile";
 
 ReactDOM.render(
   <React.StrictMode>
-
     <BrowserRouter>
       <Routes>
         <Route path="" element={<App />}>
           <Route index element={<Home />} />
           <Route path="/market" element={<MarketPage />} />
+          <Route path="settings" element={<Settings />}>
+            <Route index element={<Profile />} />
+          </Route>
         </Route>
         <Route path="register" element={<Register />} />
         <Route path="login" element={<Login />} />
         <Route path="forgot-password" element={<ForgotPassword />} />
         <Route path="verification" element={<VerificationPage />} />
-
-
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

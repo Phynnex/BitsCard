@@ -77,6 +77,15 @@ input:focus {
   color: var(--pri-color);
 }
 
+.alt-btn {
+  background-color: var(--alt-bg);
+  color: var(--body-text) !important;
+  width: 203px;
+  height: 56px;
+  padding: 10px 20px;
+  border-radius: 12px;
+}
+
 .pri-btn:hover {
   color: #fff;
 }
