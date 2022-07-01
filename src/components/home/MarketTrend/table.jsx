@@ -3,7 +3,8 @@ import axios from "axios";
 import Lottie from "react-lottie";
 import animationDataUp from "../../../lottie/up.json";
 import animationDataDown from "../../../lottie/downward.json";
-import { Link } from "react-router-dom";
+import { useNavigate, Link} from "react-router-dom";
+
 
 import {
   TransTableBody,
@@ -15,11 +16,10 @@ import { useQuery } from "react-query";
 import { getMarketTrends } from "../../../services/marketService";
 
 const MarketTrend = () => {
+  const navigate = useNavigate();
   const queryClient = useQuery();
   const {
     data: marketTrends,
-    isLoading,
-    isError,
   } = useQuery("market", getMarketTrends);
   // console.log({ marketTrends, isLoading, isError });
   // console.log(marketTrends, "This is market");
@@ -45,6 +45,7 @@ const MarketTrend = () => {
   // console.log(marketTrends);
   return (
     <>
+     
       <div className="container">
         <h2 className="text-white">Market Trend</h2>
       </div>
@@ -61,7 +62,9 @@ const MarketTrend = () => {
               </tr>
 
               {marketTrends?.map((coin, key) => (
-                <tr key={key}>
+                <tr key={key} onClick={() => {
+                  navigate(`/market/${coin.name}`);
+                }}>
                   <td>
                     <div className="d-flex justify-content-start">
                       <img
@@ -76,6 +79,7 @@ const MarketTrend = () => {
                         <div>{coin.symbol}</div>
                       </div>
                     </div>
+                   
                   </td>
 
                   <td>${coin.current_price.toLocaleString()}</td>
@@ -111,6 +115,7 @@ const MarketTrend = () => {
       </TableScrollDiv>
       <div className="d-flex justify-content-center">
         <Link to="/market">
+          
           <button className="sec-btn">View Markets</button>
         </Link>
       </div>

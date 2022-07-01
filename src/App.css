@@ -262,3 +262,10 @@ footer a:hover {
   background-color: #f5f5f5;
   background-size: cover;
 }
+
+.news-card-container {
+  width: 30%;
+  height: 75%;
+  border-radius: 20px;
+  background: #c4c4c4;
+}

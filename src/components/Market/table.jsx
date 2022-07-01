@@ -3,7 +3,7 @@ import axios from "axios";
 import Lottie from "react-lottie";
 import animationDataUp from "../../lottie/up.json";
 import animationDataDown from "../../lottie/downward.json";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import {
   TransTableBody,
@@ -15,6 +15,8 @@ import { useQuery } from "react-query";
 import { getAllCoins } from "../../services/marketService";
 
 const AllCoins = () => {
+  const navigate = useNavigate();
+
   const queryClient = useQuery();
   const {
     data: allCoins,
@@ -55,7 +57,9 @@ const AllCoins = () => {
               </tr>
 
               {allCoins?.map((coin, key) => (
-                <tr key={key}>
+                <tr key={key} onClick={() => {
+                  navigate(`/market/${coin.name}`);
+                }}>
                   <td>
                     <div className="d-flex justify-content-start">
                       <img

@@ -12,6 +12,9 @@ import Login from "./pages/Login";
 import ForgotPassword from "./pages/ForgotPassword";
 import VerificationPage from "./pages/VerificationPage";
 import MarketPage from "./pages/MarketPage";
+import CryptoChart from "./pages/CryptoChart";
+import News from "./pages/NewsPage";
+import SingleNews from "./pages/SingleNews";
 import Settings from "./pages/settings";
 
 // settings components
@@ -24,6 +27,11 @@ ReactDOM.render(
         <Route path="" element={<App />}>
           <Route index element={<Home />} />
           <Route path="/market" element={<MarketPage />} />
+          <Route path="market/:coin" element={<CryptoChart />} />
+          <Route path="/news" element={<News />} />
+          <Route path="news/:id" element={<SingleNews />} />
+
+
           <Route path="settings" element={<Settings />}>
             <Route index element={<Profile />} />
           </Route>
