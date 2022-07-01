@@ -5,7 +5,7 @@ import ctaImg from "../../assets/image/home/cta.svg";
 
 const CTA = () => {
   return (
-    <section>
+    <section className={styles.homepageSection}>
       <div className={styles.cta}>
         <div className="container">
           <div className="row">

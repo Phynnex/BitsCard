@@ -15,11 +15,13 @@ import MarketPage from "./pages/MarketPage";
 import CryptoChart from "./pages/CryptoChart";
 import News from "./pages/NewsPage";
 import SingleNews from "./pages/SingleNews";
+import Settings from "./pages/settings";
 
+// settings components
+import Profile from "./components/settings/Profile";
 
 ReactDOM.render(
   <React.StrictMode>
-
     <BrowserRouter>
       <Routes>
         <Route path="" element={<App />}>
@@ -30,13 +32,14 @@ ReactDOM.render(
           <Route path="news/:id" element={<SingleNews />} />
 
 
+          <Route path="settings" element={<Settings />}>
+            <Route index element={<Profile />} />
+          </Route>
         </Route>
         <Route path="register" element={<Register />} />
         <Route path="login" element={<Login />} />
         <Route path="forgot-password" element={<ForgotPassword />} />
         <Route path="verification" element={<VerificationPage />} />
-
-
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
