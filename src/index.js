@@ -12,6 +12,9 @@ import Login from "./pages/Login";
 import ForgotPassword from "./pages/ForgotPassword";
 import VerificationPage from "./pages/VerificationPage";
 import MarketPage from "./pages/MarketPage";
+import CryptoChart from "./pages/CryptoChart";
+import News from "./pages/NewsPage";
+import SingleNews from "./pages/SingleNews";
 
 
 ReactDOM.render(
@@ -22,6 +25,11 @@ ReactDOM.render(
         <Route path="" element={<App />}>
           <Route index element={<Home />} />
           <Route path="/market" element={<MarketPage />} />
+          <Route path="market/:coin" element={<CryptoChart />} />
+          <Route path="/news" element={<News />} />
+          <Route path="news/:id" element={<SingleNews />} />
+
+
         </Route>
         <Route path="register" element={<Register />} />
         <Route path="login" element={<Login />} />

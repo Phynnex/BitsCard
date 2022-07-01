@@ -3,7 +3,7 @@ import axios from "axios";
 import Chart from "react-apexcharts";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
-import ThreeRowNews from "../components/ThreeRowNews";
+// import ThreeRowNews from "../components/ThreeRowNews";
 
 const CryptoChart = () => {
   let param = useParams();
@@ -12,16 +12,17 @@ const CryptoChart = () => {
   const [options, setOptions] = useState(null);
   const [series, setSeries] = useState(null);
   const [coin, setCoin] = useState(null);
-
+  console.log(param.coin, "new")
   useEffect(() => {
     const fetchChartData = async () => {
       let response = await axios
         .get(
-          `https://api.coingecko.com/api/v3/coins/${param.crypto}/ohlc?vs_currency=usd&days=7`
+          `https://api.coingecko.com/api/v3/coins/bitcoin/ohlc?vs_currency=usd&days=7`
         )
         .catch(function (error) {
-          console.log(error.toJSON());
+          console.log(error.toJSON()); 
         });
+
 
       setOptions({
         chart: {
@@ -29,7 +30,7 @@ const CryptoChart = () => {
           // height: 350,
         },
         title: {
-          text: `${param.crypto.toUpperCase()} CandleStick Chart`,
+          text: `${param.coin.toUpperCase()} CandleStick Chart`,
           align: "center",
         },
         xaxis: {
@@ -46,23 +47,23 @@ const CryptoChart = () => {
     };
 
     fetchChartData();
-  }, [setOptions, setSeries, param.crypto]);
+  }, [setOptions, setSeries, param.coin]);
 
   useEffect(() => {
     const fetchCoin = async () => {
       let response = await axios
         .get(
-          `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${param.crypto}&order=market_cap_desc&per_page=100&page=1&sparkline=false`
+          `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${param.coin}&order=market_cap_desc&per_page=100&page=1&sparkline=false`
         )
         .catch(function (error) {
           console.log(error.toJSON());
         });
-      setCoin(response.data[0]);
-      console.log(response.data[0]);
+      setCoin(response.data);
+      
     };
 
     fetchCoin();
-  }, [setCoin, param.crypto]);
+  }, [setCoin, param.coin]);
 
   const toSellPage = () => {
     navigate("sell", {
@@ -70,11 +71,17 @@ const CryptoChart = () => {
     });
   };
 
+  const toBuyPage = () => {
+    navigate("buy", {
+      state: { id: coin.symbol, price: coin.current_price },
+    });
+  };
+
   return (
-    <div className="container mt-3">
+    <div className="container mt-5">
      
       {coin === null ? (
-        <h2 className="m-0">{param.crypto.toUpperCase()}</h2>
+        <h2 className="m-0">{param.coin.toUpperCase()}</h2>
       ) : (
         <div className="text-center">
           <div className="d-flex justify-content-center align-items-center">
@@ -109,11 +116,11 @@ const CryptoChart = () => {
           </div>
 
           <div className="d-flex justify-content-around  my-4">
-            <Link to="buy" className="pri-btn">
+          <button onClick={toBuyPage} className="pri-btn">
               Buy
-            </Link>
+            </button>
 
-            <button onClick={toSellPage} className="pri-alt-btn">
+            <button onClick={toSellPage} className="sec-btn">
               Sell
             </button>
           </div>

@@ -13,7 +13,7 @@ const News = () => {
         console.log(error.toJSON());
         setNewsErr(error.message);
       });
-    setNews(response.data.slice(0, 4));
+    setNews(response.data);
   };
   const [news, setNews] = useState(null);
   const [newsErr, setNewsErr] = useState(null);
@@ -22,7 +22,7 @@ const News = () => {
   }, [setNews]);
   return (
     <div className="container">
-      <h2 className="text-white mb-5">News of The Day</h2>
+      <h2 className="text-white mb-5">Latest News</h2>
 
       <div className={styles.cryptoNewsTableWrapper}>
         {newsErr != null ? (
@@ -44,17 +44,13 @@ const News = () => {
                     <div className="text-white m-0">{val.title}</div>
                     <span>{val.author}</span>
                     <p className="m-o">{moment("2022-05-15T19:39:03.000000Z").fromNow()} </p>
+
                   </div>
                 </div>
               </Link>
             );
           })
         )}
-      </div>
-      <div className="d-flex justify-content-center mt-5">
-        <Link to="/news">
-          <button className="sec-btn">View More</button>
-        </Link>
       </div>
     </div>
   );

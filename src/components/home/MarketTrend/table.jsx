@@ -20,8 +20,6 @@ const MarketTrend = () => {
   const queryClient = useQuery();
   const {
     data: marketTrends,
-    isLoading,
-    isError,
   } = useQuery("market", getMarketTrends);
   // console.log({ marketTrends, isLoading, isError });
   // console.log(marketTrends, "This is market");
@@ -64,11 +62,9 @@ const MarketTrend = () => {
               </tr>
 
               {marketTrends?.map((coin, key) => (
-               
-                  
-               
-                  
-                <tr key={key}>
+                <tr key={key} onClick={() => {
+                  navigate(`/market/${coin.name}`);
+                }}>
                   <td>
                     <div className="d-flex justify-content-start">
                       <img
