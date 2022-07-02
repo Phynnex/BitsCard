@@ -272,7 +272,6 @@ footer a:hover {
 
 .faq-container {
   background: var(--alt-bg);
-  /* background: red; */
   padding: 40px 40px;
   border-radius: 10px
 
@@ -287,5 +286,21 @@ footer a:hover {
 
 .accordion-icon {
   color: var(--pri-color);
-
 }
+
+/* Submit Request Styles */
+.form-control {
+  background: var(--body-bg) !important;
+  margin: 50px 0px 30px;
+}
+
+.form-check-input {
+  width: 120px;
+}
+
+.request:focus {
+  outline:none;
+}
+
+/* Submit Request Styles */
+

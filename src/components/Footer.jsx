@@ -28,7 +28,7 @@ const Footer = () => {
           </div>
           <div className="col">
             <div className="footer-header">Product</div>
-            <Link to="#">
+            <Link to="/mobile-app">
               <p>Mobile App</p>
             </Link>
           </div>
@@ -38,7 +38,7 @@ const Footer = () => {
               <p>Help Center</p>
             </Link>
 
-            <Link to="#">
+            <Link to="/submit-request">
               <p>Submit A Request</p>
             </Link>
 

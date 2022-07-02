@@ -1,5 +1,3 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
 import Lottie from "react-lottie";
 import animationDataUp from "../../lottie/up.json";
 import animationDataDown from "../../lottie/downward.json";

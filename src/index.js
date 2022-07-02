@@ -21,6 +21,8 @@ import Settings from "./pages/settings";
 // settings components
 import Profile from "./components/settings/Profile";
 import Faq from "./pages/Faq";
+import MobileApp from "./pages/MobileApp";
+import SubmitRequest from "./pages/SubmitRequest";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -33,6 +35,8 @@ ReactDOM.render(
           <Route path="/news" element={<News />} />
           <Route path="/news" element={<News />} />
           <Route path="/faq" element={<Faq />} />
+          <Route path="/mobile-app" element={<MobileApp />} />
+          <Route path="/submit-request" element={<SubmitRequest />} />
 
 
           <Route path="settings" element={<Settings />}>
