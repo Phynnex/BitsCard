@@ -39,7 +39,7 @@ ReactDOM.render(
           <Route path="/submit-request" element={<SubmitRequest />} />
 
 
-          <Route path="settings" element={<Settings />}>
+          <Route path="/settings" element={<Settings />}>
             <Route index element={<Profile />} />
           </Route>
         </Route>
