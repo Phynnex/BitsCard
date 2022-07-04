@@ -53,8 +53,11 @@ const Register = () => {
             </div>
 
             <div className="d-grid mt-3">
-              <button type="submit" className="pri-btn">
+              <button className="pri-btn">
+                <Link to='/verification'>
                 Sign up
+
+                </Link>
               </button>
             </div>
           </form>

@@ -22,7 +22,7 @@ const SubmitRequest = () => {
           type="checkbox"
           className="form-check-input"
           id="exampleCheck1"
-          style={{margin:'32px 20px 32px 0px', background:'#21242d', color:'#ffc107'}}
+          style={{margin:'32px 20px 32px 0px', color:'#ffc107'}}
           
         />
         <label className="form-check-label" for="exampleCheck1" style={{marginTop:'28px'}}>

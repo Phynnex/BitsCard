@@ -23,6 +23,9 @@ import Profile from "./components/settings/Profile";
 import Faq from "./pages/Faq";
 import MobileApp from "./pages/MobileApp";
 import SubmitRequest from "./pages/SubmitRequest";
+import Username from "./pages/Username";
+import Password from "./pages/Password";
+import Notification from "./pages/Notification";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -37,13 +40,14 @@ ReactDOM.render(
           <Route path="/faq" element={<Faq />} />
           <Route path="/mobile-app" element={<MobileApp />} />
           <Route path="/submit-request" element={<SubmitRequest />} />
-
-
+          <Route path="/notification" element={<Notification />} />
           <Route path="/settings" element={<Settings />}>
             <Route index element={<Profile />} />
           </Route>
         </Route>
         <Route path="register" element={<Register />} />
+        <Route path="register-username" element={<Username />} />
+        <Route path="register-password" element={<Password />} />
         <Route path="login" element={<Login />} />
         <Route path="forgot-password" element={<ForgotPassword />} />
         <Route path="verification" element={<VerificationPage />} />
@@ -53,7 +57,4 @@ ReactDOM.render(
   document.getElementById("root")
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
