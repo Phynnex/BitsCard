@@ -12,7 +12,7 @@ const CryptoChart = () => {
   const [options, setOptions] = useState(null);
   const [series, setSeries] = useState(null);
   const [coin, setCoin] = useState(null);
-  console.log(param.coin, "new")
+  console.log(param.coin, "new");
   useEffect(() => {
     const fetchChartData = async () => {
       let response = await axios
@@ -20,9 +20,8 @@ const CryptoChart = () => {
           `https://api.coingecko.com/api/v3/coins/bitcoin/ohlc?vs_currency=usd&days=7`
         )
         .catch(function (error) {
-          console.log(error.toJSON()); 
+          console.log(error.toJSON());
         });
-
 
       setOptions({
         chart: {
@@ -59,27 +58,25 @@ const CryptoChart = () => {
           console.log(error.toJSON());
         });
       setCoin(response.data);
-      
     };
 
     fetchCoin();
   }, [setCoin, param.coin]);
 
-  const toSellPage = () => {
-    navigate("sell", {
-      state: { id: coin.symbol, price: coin.current_price },
-    });
-  };
+  // const toSellPage = () => {
+  //   navigate("sell", {
+  //     state: { id: coin.symbol, price: coin.current_price },
+  //   });
+  // };
 
-  const toBuyPage = () => {
-    navigate("buy", {
-      state: { id: coin.symbol, price: coin.current_price },
-    });
-  };
+  // const toBuyPage = () => {
+  //   navigate("buy", {
+  //     state: { id: coin.symbol, price: coin.current_price },
+  //   });
+  // };
 
   return (
     <div className="container mt-5">
-     
       {coin === null ? (
         <h2 className="m-0">{param.coin.toUpperCase()}</h2>
       ) : (
@@ -116,12 +113,12 @@ const CryptoChart = () => {
           </div>
 
           <div className="d-flex justify-content-around  my-4">
-          <button onClick={toBuyPage} className="pri-btn">
-              Buy
+            <button className="pri-btn">
+              <Link to="/dashboard" style={{color:'#21242d'}}>Buy</Link>
             </button>
 
-            <button onClick={toSellPage} className="sec-btn">
-              Sell
+            <button className="sec-btn">
+              <Link to="/dashboard" style={{color:'#ffc107'}}>Sell</Link>
             </button>
           </div>
         </div>

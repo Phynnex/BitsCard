@@ -305,3 +305,18 @@ footer a:hover {
 
 /* Submit Request Styles */
 
+.dashboard-page {
+  display: flex;
+  margin-right: 50px;
+  height: 90vh;
+  align-items: center;
+  justify-content: center; 
+  font-size: 3rem;
+}
+
+.sidebar-support-btn {
+  background: var(--body-bg);
+  padding: 20px 40px;
+  border-radius: 10px
+
+}

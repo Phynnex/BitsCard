@@ -22,7 +22,7 @@ export const FormsModal = styled.div`
   top: 15%;
   left: 63%;
   right: 12%;
-  bottom: 50%;
+  // bottom: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,7 +34,7 @@ export const FormsModal = styled.div`
   animation-duration: 0.5s;
   z-index: 105;
   border-radius: 10px;
-  overflow-y: scroll;
+  overflow-y: auto;
 
 
 `;
@@ -42,8 +42,13 @@ export const FormsModal = styled.div`
 export const TextContainer = styled.div`
   width: 100%;
   display: flex;
-  // justify-content: center;
   align-items: center;
+  &:hover {
+    background: #ffc107;
+    cursor: pointer;
+    border-radius: 10px;
+   
+  }
 `;
 
 export const ImageDiv = styled.div`
@@ -59,14 +64,19 @@ export const TextDiv = styled.div`
   color: #a7aebf;
   cursor: pointer;
 
-
   p: first-child {
     line-height: 0;
     font-size: 12px;
+    &:hover {
+      color: #21242d;
+    }
   }
   p{
     line-height: 0;
     font-size: 8px;
+    &:hover {
+      color: #21242d;
+    }
   }
 `;
 

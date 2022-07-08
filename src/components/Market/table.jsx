@@ -2,7 +2,6 @@ import Lottie from "react-lottie";
 import animationDataUp from "../../lottie/up.json";
 import animationDataDown from "../../lottie/downward.json";
 import { useNavigate } from "react-router-dom";
-
 import {
   TransTableBody,
   TransTableContainer,

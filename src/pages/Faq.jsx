@@ -4,7 +4,6 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import styles from "../assets/css/faq.modules.css";
 import CTA from "../components/home/CTA";
 
 export default function SimpleAccordion() {

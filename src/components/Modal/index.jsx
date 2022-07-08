@@ -11,10 +11,9 @@ const ModalContent = () => {
   };
   return (
     <div>
-        <Link to='/notification'>
+      <Link to="/notification">
         <TopText className="d-flex justify-content-end">See all</TopText>
-
-        </Link>
+      </Link>
 
       {Modaldata.map((info) => (
         <div>
@@ -23,20 +22,16 @@ const ModalContent = () => {
               <img src={info.icon} alt="icon" width="12" height="12" />
             </ImageDiv>
             <Link to={info.link}>
-            <TextDiv>
-              <p className='text-white'>{info.tittle}</p>
-              <div>
-              <p>{info.text}</p>
-              <p>{info.date}</p>
-              </div>
-             
-            </TextDiv>
+              <TextDiv>
+                <p className="text-white">{info.tittle}</p>
+                <div>
+                  <p>{info.text}</p>
+                  <p>{info.date}</p>
+                </div>
+              </TextDiv>
             </Link>
-            
-            
           </TextContainer>
           <div style={{ border: "0.5px solid #16171d" }}></div>
-
         </div>
       ))}
     </div>

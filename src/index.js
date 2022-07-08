@@ -16,6 +16,7 @@ import CryptoChart from "./pages/CryptoChart";
 import News from "./pages/NewsPage";
 import SingleNews from "./pages/SingleNews";
 import Settings from "./pages/settings";
+import Dashboard from "./pages/Dashboard/index";
 
 
 // settings components
@@ -27,16 +28,31 @@ import Username from "./pages/Username";
 import Password from "./pages/Password";
 import Notification from "./pages/Notification";
 
+// Dashboard components
+import DashboardHome from "./pages/Dashboard/DashboardHome";
+import SellGiftCard from "./pages/Dashboard/SellGiftCard";
+import BuyGiftCard from "./pages/Dashboard/BuyGiftCard";
+import SellCrypto from "./pages/Dashboard/SellCrypto";
+import BuyCrypto from "./pages/Dashboard/BuyCrypto";
+import SendCrypto from "./pages/Dashboard/SendCrypto";
+import RecieveCrypto from "./pages/Dashboard/RecieveCrypto";
+import Withdraw from "./pages/Dashboard/Withdraw";
+import Transfer from "./pages/Dashboard/Transfer";
+import Portfolio from "./pages/Dashboard/Portfolio";
+import MySettings from "./pages/Dashboard/MySettings";
+
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
+    {/* <Sidebar /> */}
+
       <Routes>
         <Route path="" element={<App />}>
           <Route index element={<Home />} />
           <Route path="/market" element={<MarketPage />} />
           <Route path="market/:coin" element={<CryptoChart />} />
           <Route path="/news" element={<News />} />
-          <Route path="/news" element={<News />} />
+          <Route path="news/:id" element={<SingleNews />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/mobile-app" element={<MobileApp />} />
           <Route path="/submit-request" element={<SubmitRequest />} />
@@ -51,6 +67,22 @@ ReactDOM.render(
         <Route path="login" element={<Login />} />
         <Route path="forgot-password" element={<ForgotPassword />} />
         <Route path="verification" element={<VerificationPage />} />
+        {/* <Route path="/dashboard" element={<DashboardHome />} /> */}
+
+        <Route path="/dashboard" element={<Dashboard />} >
+          <Route index element={<DashboardHome/>} />
+          <Route path="sell-giftcard" element={<SellGiftCard/>} />
+          <Route path="buy-giftcard" element={<BuyGiftCard />} />
+          <Route path="sell-crypto" element={<SellCrypto/>} />
+          <Route path="buy-crypto" element={<BuyCrypto />} />
+          <Route path="send-crypto" element={<SendCrypto />} />
+          <Route path="recieve-crypto" element={<RecieveCrypto />} />
+          <Route path="withdraw" element={<Withdraw />} />
+          <Route path="transfer" element={<Transfer />} />
+          <Route path="portfolio" element={<Portfolio />} />
+          <Route path="settings" element={<MySettings />} />
+
+       </Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

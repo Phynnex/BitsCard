@@ -1,10 +1,9 @@
 import React, {useEffect, useState} from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 
 const SingleNews = () => {
   let param = useParams()
-  let navigate = useNavigate();
   let [news, setNews] = useState(null);
   let [newsErr, setNewsErr] = useState(null);
 
@@ -21,17 +20,17 @@ const SingleNews = () => {
       console.log(response.data)
     };
     fetchNews();
-  }, [setNews]);
+  }, []);
   return (
     <div className="container ">
       {
         news === null ? <div>loading...</div>:
 
         <div>
-          <div style={{backgroundImage:`url(${news.image})`}} className="news-cover-img mt-5"></div>
-          <div className="news-cover-title my-2">{news.title}</div>
+          <div style={{backgroundImage:`url(${news.image})`, height:'100vh'}} className="news-cover-img mt-3"></div>
+          <h3 className="news-cover-title my-2">{news.title}</h3>
 
-          <div>{news.description}</div>
+          <p>{news.description}</p>
 
         </div>
       }
