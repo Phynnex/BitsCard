@@ -22,4 +22,8 @@ function App() {
   );
 }
 
+// const queryClient = new QueryClient({
+  
+// })
+
 export default App;

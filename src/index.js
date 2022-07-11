@@ -30,10 +30,8 @@ import Notification from "./pages/Notification";
 
 // Dashboard components
 import DashboardHome from "./pages/Dashboard/DashboardHome";
-import SellGiftCard from "./pages/Dashboard/SellGiftCard";
-import BuyGiftCard from "./pages/Dashboard/BuyGiftCard";
-import SellCrypto from "./pages/Dashboard/SellCrypto";
-import BuyCrypto from "./pages/Dashboard/BuyCrypto";
+import GiftCard from "./pages/Dashboard/GiftCard";
+import Crypto from "./pages/Dashboard/Crypto";
 import SendCrypto from "./pages/Dashboard/SendCrypto";
 import RecieveCrypto from "./pages/Dashboard/RecieveCrypto";
 import Withdraw from "./pages/Dashboard/Withdraw";
@@ -41,11 +39,17 @@ import Transfer from "./pages/Dashboard/Transfer";
 import Portfolio from "./pages/Dashboard/Portfolio";
 import MySettings from "./pages/Dashboard/MySettings";
 
+import { QueryClient, QueryClientProvider } from "react-query";
+
+const queryClient = new QueryClient();
+
 ReactDOM.render(
-  <React.StrictMode>
+
+    <React.StrictMode>
+<QueryClientProvider client={queryClient}>
     <BrowserRouter>
     {/* <Sidebar /> */}
-
+    
       <Routes>
         <Route path="" element={<App />}>
           <Route index element={<Home />} />
@@ -68,24 +72,25 @@ ReactDOM.render(
         <Route path="forgot-password" element={<ForgotPassword />} />
         <Route path="verification" element={<VerificationPage />} />
         {/* <Route path="/dashboard" element={<DashboardHome />} /> */}
-
+    
         <Route path="/dashboard" element={<Dashboard />} >
           <Route index element={<DashboardHome/>} />
-          <Route path="sell-giftcard" element={<SellGiftCard/>} />
-          <Route path="buy-giftcard" element={<BuyGiftCard />} />
-          <Route path="sell-crypto" element={<SellCrypto/>} />
-          <Route path="buy-crypto" element={<BuyCrypto />} />
+          <Route path="giftcard" element={<GiftCard/>} />
+          <Route path="crypto" element={<Crypto/>} />
           <Route path="send-crypto" element={<SendCrypto />} />
           <Route path="recieve-crypto" element={<RecieveCrypto />} />
           <Route path="withdraw" element={<Withdraw />} />
           <Route path="transfer" element={<Transfer />} />
           <Route path="portfolio" element={<Portfolio />} />
           <Route path="settings" element={<MySettings />} />
-
+    
        </Route>
       </Routes>
     </BrowserRouter>
-  </React.StrictMode>,
+    </QueryClientProvider>
+    </React.StrictMode>,
+
+  
   document.getElementById("root")
 );
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../../assets/css/dashboardhome.module.css";
+import styles from "../../../assets/css/dashboardhome.module.css";
 import { useNavigate } from "react-router-dom";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
@@ -12,8 +12,8 @@ const Card1 = () => {
 
   return (
     <>
-      <div className="account-card">
-        <div className="d-flex justify-content-between">
+      <div className={styles.accountCard} >
+        <div className="d-flex justify-content-between ">
         <p className="m-0 total-bal-text">crypto balance</p>
         <div onClick={() => setShow(!show)} >
             {show ? <VisibilityOffIcon /> : <VisibilityIcon />}
@@ -33,19 +33,19 @@ const Card1 = () => {
         <div className="d-flex align-items-center justify-content-between mt-2">
           <button
             onClick={() => navigate("/market")}
-            className="account-card-btn shadow"
+            className={styles.accountCardBtn} 
           >
             Buy/Sell
           </button>
           <button
             onClick={() => navigate("/all-assets")}
-            className="account-card-btn shadow"
+            className={styles.accountCardBtn}
           >
             Send
           </button>
           <button
             onClick={() => navigate("/receive-crypto")}
-            className="account-card-btn shadow"
+            className={styles.accountCardBtn}
           >
             Receive
           </button>

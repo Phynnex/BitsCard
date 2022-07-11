@@ -19,9 +19,9 @@ export const TopText = styled.p`
 
 export const FormsModal = styled.div`
   height: 60%;
-  top: 15%;
-  left: 63%;
-  right: 12%;
+  top: 5%;
+  left: 75%;
+  right: 2%;
   // bottom: 50%;
   display: flex;
   justify-content: center;

@@ -1,27 +1,51 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
 import Lottie from "react-lottie";
-import animationDataUp from "../../../lottie/up.json";
-import animationDataDown from "../../../lottie/downward.json";
-import { useNavigate, Link} from "react-router-dom";
-
-
+import animationDataUp from "../../../../lottie/up.json";
+import animationDataDown from "../../../../lottie/downward.json";
+import { Link, useNavigate } from "react-router-dom";
 import {
   TransTableBody,
-  TransTableContainer,
   TransTableContent,
-  TableScrollDiv,
-} from "./style";
+  
+} from "../../../market/style";
 import { useQuery } from "react-query";
-import { getMarketTrends } from "../../../services/marketService";
+import { getAllCoins } from "../../../../services/marketService";
+import  styled  from "styled-components";
 
-const MarketTrend = () => {
+const TableScrollDiv = styled.div`
+width: 90%;
+`
+const TransTableContainer = styled.div`
+  width: 95%;
+  height: 500px;
+  overflow-y: auto;
+  background: #21242d;
+  margin: 0px auto;
+  border-radius: 12px;
+`
+const AllCrypto = () => {
   const navigate = useNavigate();
+
   const queryClient = useQuery();
   const {
-    data: marketTrends,
-  } = useQuery("market", getMarketTrends);
-  
+    data: allCoins,
+    isLoading,
+    isError,
+  } = useQuery("market", getAllCoins);
+  console.log({ allCoins, isLoading, isError });
+  console.log(allCoins, "This is market");
+
+  // const queryClient = useQuery();
+  // const {
+  //   data: allCoins,
+  //   isLoading,
+  //   isError,
+  // } = useQuery("market", getAllCoins);
+  // console.log({ allCoins, isLoading, isError });
+  // console.log(allCoins, "This is market");
+  // const queryClient = useQuery();
+  // const {
+  //   data: marketTrends,
+  // } = useQuery("market", getMarketTrends);
 
   const defaultOptions = {
     loop: true,
@@ -40,15 +64,8 @@ const MarketTrend = () => {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
-
-  
   return (
     <>
-     
-      <div className="container">
-        <h2 className="text-white">Market Trend</h2>
-      </div>
-
       <TableScrollDiv>
         <TransTableContainer>
           <TransTableContent>
@@ -60,7 +77,7 @@ const MarketTrend = () => {
                 <th>24h Change</th>
               </tr>
 
-              {marketTrends?.map((coin, key) => (
+              {allCoins?.map((coin, key) => (
                 <tr key={key} onClick={() => {
                   navigate(`/market/${coin.name}`);
                 }}>
@@ -78,7 +95,6 @@ const MarketTrend = () => {
                         <div>{coin.symbol}</div>
                       </div>
                     </div>
-                   
                   </td>
 
                   <td>${coin.current_price.toLocaleString()}</td>
@@ -112,14 +128,10 @@ const MarketTrend = () => {
           </TransTableContent>
         </TransTableContainer>
       </TableScrollDiv>
-      <div className="d-flex justify-content-center">
-        <Link to="/market">
-          
-          <button className="sec-btn">View Markets</button>
-        </Link>
-      </div>
+    
+     
     </>
   );
 };
 
-export default MarketTrend;
+export default AllCrypto;

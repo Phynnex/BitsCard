@@ -4,7 +4,6 @@ import styled, { css } from "styled-components/macro";
 export const TableScrollDiv = styled.div`
   width: 90%;
   margin: 60px auto;
-
 `
 
 
@@ -42,7 +41,7 @@ export const TransTableBody = styled.table`
 
 export const TransTableContainer = styled.div`
   width: 95%;
-
+  
 `;
 export const TransTableContent = styled.div`
   box-sizing: border-box;

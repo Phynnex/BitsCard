@@ -30,14 +30,14 @@ const Navbar = () => {
             <Link to="/market">Market</Link>
           </div>
           <div className="d-flex align-items-center gap-5">
-            {show && (
+            {/* {show && (
               <FormsModal onClick={closeShowModal} show={show}>
                 <ModalContent />
               </FormsModal>
             )}
             <button onClick={handleShowDetails}>
               <img src={Notification_icon} alt="bell" />
-            </button>
+            </button> */}
             <Link to="/login">Login</Link>
             <Link to="/register" className="nav-btn">
               Sign up

@@ -14,11 +14,13 @@ const SidebarLink = styled(Link)`
   font-size: 18px;
   border-radius:10px;
   margin: 0px 10px;
+  
   &:hover {
     background: #ffc107;
     color: #16171d;
     cursor: pointer;
   }
+ 
 `;
 
 const SidebarLabel = styled.span`

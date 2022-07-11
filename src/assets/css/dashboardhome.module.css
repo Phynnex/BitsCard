@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-.account-card {
-  width: 100%;
+.accountCard {
+  width: 400px;
   height: 200px;
   border-radius: 20px;
   padding: 20px;
+  margin-top: 10px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -16,32 +17,8 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
-  
-.acct-bal {
-  font-size: 24px;
-  font-weight: 600;
-}
-  
-.total-bal-text {
-  color: rgba(255, 255, 255, 0.72);
-}
 
-
-.portfolio-action-wrapper button{
-    color: var(--body-text) ;
-}
-
-.wallet-container{
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    color: var(--body-text);
-}
-
-.wallet-small-text{
-    font-size: 12px;
-}
-
-.account-card-btn{
+.accountCardBtn{
   width: 90px;
   height: 35px;
   border-radius: 12px;
@@ -51,18 +28,37 @@
   font-weight: 500;
 }
 
-/* account action button */
-.account-action-btn{
-  width: 100px;
-  height: 40px;
-  border-radius: 10px;
-  background-color: var(--pri-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--body-text);
-  font-size: 12px;
-}
-.accordion-button::after{
+.cryptoTable {
+  width:50% !important; 
+  margin:20px 30px 20px 20px; 
+  background:#21242d !important; 
+  height:300px; 
+  border:#a7aebf !important;
+  border-radius: 20px !important;
+  box-sizing: border-box;
+  padding: 20px 40px;
+  
+}::-webkit-scrollbar {
   display: none;
 }
+
+.tableBtn {
+  /* display:flex;
+  justify-content: center;
+  align-items: center; */
+  border-radius:4px;
+  color:#21242d;
+  height:20px; 
+  text-align:left;
+}
+
+.transactionTab {
+  background:#21242d;
+  margin: 20px auto !important;
+}
+
+.transactionTab .css-1aquho2-MuiTabs-indicator {
+  background-color: #ffc107 !important;
+}
+
+

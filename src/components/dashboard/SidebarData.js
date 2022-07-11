@@ -89,20 +89,12 @@ export const SidebarData = [
     icon: <IoIcons.IoMdHelpCircle />
   },
   {
-    title: 'Sell Gift Card',
-    path: '/dashboard/sell-giftcard',
+    title: 'Gift Card',
+    path: '/dashboard/giftcard',
     icon: <IoIcons.IoMdHelpCircle />
   },{
-    title: 'Buy Gift Card',
-    path: '/dashboard/buy-giftcard',
-    icon: <IoIcons.IoMdHelpCircle />
-  },{
-    title: 'Sell Crypto',
-    path: '/dashboard/sell-crypto',
-    icon: <IoIcons.IoMdHelpCircle />
-  },{
-    title: 'Buy Crypto',
-    path: '/dashboard/buy-crypto',
+    title: 'Crypto',
+    path: '/dashboard/crypto',
     icon: <IoIcons.IoMdHelpCircle />
   },{
     title: 'Send Crypto',
