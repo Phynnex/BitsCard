@@ -49,7 +49,7 @@ export default function CryptoTab() {
   };
 
   return (
-    <Box  style={{width:'50%',borderRadius:'12px', background:'',  marginTop:'20px', border:'10px solid #21242d', height:'400px'}} >
+    <Box  style={{width:'50%',borderRadius:'12px', background:'',  marginTop:'20px', border:'10px solid #21242d', height:'450px'}} >
       <Box  style={{background:'#21242d'}}>
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" >
           <Tab label="Buy" {...a11yProps(0)} />

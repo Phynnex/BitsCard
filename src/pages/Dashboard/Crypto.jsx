@@ -4,9 +4,10 @@ import TransactionTable from '../../components/dashboard/Home/Section3/Transacti
 
 const BuyCrypto = () => {
     return (
-    <div className='d-flex'>
+        <div className='d-flex' >
         <CryptoTab/>
-        <TransactionTable />
+        <TransactionTable  />
+
     </div>
     );
 }

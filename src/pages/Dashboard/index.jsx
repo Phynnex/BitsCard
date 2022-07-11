@@ -25,7 +25,7 @@ const Index = () => {
         <div className='d-flex'>
             <Sidebar />
 
-            <div className='w-100 container'>
+            <div className='w-100 container mt-3'>
                 <AppBar position="static" style={{ background: "#21242d",height:'40px'}}
                 >
                     {show && (
@@ -44,7 +44,7 @@ const Index = () => {
                         onClick={handleShowDetails}
                     >
                         <img src={Bell} alt="notification" style={{
-                            
+                            padding:'10px'
                         }} />
                     </button>
 
