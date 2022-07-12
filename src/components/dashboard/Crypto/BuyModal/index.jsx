@@ -85,7 +85,7 @@ const ModalContent = () => {
             id="outlined-adornment-password"
             type={values.showPassword ? 'text' : 'password'}
             value={values.password}
-            onChange={handleChange('password')}
+            onChange={(e) => handleChange(e.target.value)}
             endAdornment={
               <InputAdornment position="end">
                 <IconButton
