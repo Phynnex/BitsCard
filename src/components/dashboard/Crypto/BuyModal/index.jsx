@@ -3,17 +3,12 @@ import { TextContainer, TextDiv, ImageDiv, TopText } from "./style";
 import { Link } from "react-router-dom";
 import Divider from '@mui/material/Divider';
 import styled from 'styled-components'
-import OutlinedInput from '@mui/material/OutlinedInput';
-import InputLabel from '@mui/material/InputLabel';
-import InputAdornment from '@mui/material/InputAdornment';
-import Visibility from '@mui/icons-material/Visibility';
-import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import IconButton from '@mui/material/IconButton';
 
 
 
 const InputDiv = styled.div`
-  
+  display:flex;
+  justify-content:space-between;
   background: transparent;
   padding: 10px;
   width: 100%;
@@ -25,7 +20,7 @@ const InputDiv = styled.div`
 `
 
 const Input = styled.input`
-  background: transparent !important;
+  background: transparent;
   padding: 10px;
   width: 100%;
   border: 1px solid #16171d;
@@ -35,28 +30,6 @@ const Input = styled.input`
 
 const ModalContent = () => {
   const [show, setShow] = useState(false);
-  const [values, setValues] = React.useState({
-    
-    password: '',
-   
-    showPassword: false,
-  });
-
-  const handleChange = (prop) => (event) => {
-    setValues({ ...values, [prop]: event.target.value });
-  };
-
-  const handleClickShowPassword = () => {
-    setValues({
-      ...values,
-      showPassword: !values.showPassword,
-    });
-  };
-
-  const handleMouseDownPassword = (event) => {
-    event.preventDefault();
-  };
-
 
   const closeShowModal = () => {
     setShow(!show);
@@ -80,26 +53,10 @@ const ModalContent = () => {
       </div>
 
       
-      <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
-          <OutlinedInput
-            id="outlined-adornment-password"
-            type={values.showPassword ? 'text' : 'password'}
-            value={values.password}
-            onChange={(e) => handleChange(e.target.value)}
-            endAdornment={
-              <InputAdornment position="end">
-                <IconButton
-                  aria-label="toggle password visibility"
-                  onClick={handleClickShowPassword}
-                  onMouseDown={handleMouseDownPassword}
-                  edge="end"
-                >
-                  {values.showPassword ? <VisibilityOff /> : <Visibility />}
-                </IconButton>
-              </InputAdornment>
-            }
-            label="Password"
-          />
+        <label for="pwd">Paasword *</label><br />
+
+        <Input type="password" id="pwd" name="pwd"/>
+
       
       <div className="d-flex justify-content-end mt-3">
       <button className="pri-btn w-50">Buy</button>

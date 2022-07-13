@@ -53,8 +53,8 @@ export default function SectionTab() {
     <Box sx={{ width: '100%'}} className="transactionTab" >
       <Box >
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" >
-          <Tab label="All Crypto" {...a11yProps(0)} style={{borderRadius:'4px', color:'#16171d', background:'#ffc107', margin:'40px 40px 10px', }} />
-          <Tab label="All Gift Cards" {...a11yProps(1)} style={{borderRadius:'4px', color:'#16171d', background:'#ffc107', margin:'40px 40px 10px', }}/>
+          <Tab label="All Crypto" {...a11yProps(0)} style={{ margin:'40px 40px 10px', }} />
+          <Tab label="All Gift Cards" {...a11yProps(1)} style={{margin:'40px 40px 10px', }}/>
         </Tabs>
       </Box>
       <TabPanel value={value} index={0} >

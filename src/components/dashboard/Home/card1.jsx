@@ -14,8 +14,8 @@ const Card1 = () => {
     <>
       <div className={styles.accountCard} >
         <div className="d-flex justify-content-between ">
-        <p className="m-0 total-bal-text">crypto balance</p>
-        <div onClick={() => setShow(!show)} >
+          <p className="m-0 total-bal-text">crypto balance</p>
+          <div onClick={() => setShow(!show)} >
             {show ? <VisibilityOffIcon /> : <VisibilityIcon />}
           </div>
         </div>
@@ -33,7 +33,7 @@ const Card1 = () => {
         <div className="d-flex align-items-center justify-content-between mt-2">
           <button
             onClick={() => navigate("/market")}
-            className={styles.accountCardBtn} 
+            className={styles.accountCardBtn}
           >
             Buy/Sell
           </button>
